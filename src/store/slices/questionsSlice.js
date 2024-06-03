@@ -22,7 +22,6 @@ const questionsSlice = createSlice({
         deleteQuestion: (state, action) => {
             const filteredQuestions = state.questions.filter(question => question.id !== action.payload);
             state.questions = filteredQuestions;
-
         },
         updateQuestion: (state, action) => {
             const updatedQuestions = state.questions.map(question => question.id === action.payload.id ? action.payload : question);

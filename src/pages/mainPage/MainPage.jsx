@@ -60,7 +60,6 @@ function MainPage() {
     }
 
 
-
     return (
         <div>
             <Container>
@@ -75,7 +74,6 @@ function MainPage() {
                         <Form.Label>Ответ</Form.Label>
                         <Form.Control as="textarea" rows={3} placeholder="введите ответ" {...register("answer")}/>
                     </Form.Group>
-
 
                     <Button
                         disabled={!formState.isDirty || !formState.isValid}
@@ -94,9 +92,9 @@ function MainPage() {
                 <Col lg={8}>
                     <Accordion.Item eventKey={index} >
                         <Accordion.Header>{question.title}</Accordion.Header>
-                        <Accordion.Body>
-                            {question.answer}
-                        </Accordion.Body>
+                            <Accordion.Body>
+                                {question.answer}
+                            </Accordion.Body>
                     </Accordion.Item>
                 </Col>
 
